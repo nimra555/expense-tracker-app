@@ -58,17 +58,18 @@ function Main() {
             {/* transaction history */}
             <div className="history">
                 <h2>History</h2>
-                <hr />
+                {/* <hr /> */}
                 <ul>
-                    {Addtransaction.map((trans) => {
+                    {Addtransaction.map((trans, index) => {
                         return (
-                            <li>
+                            <li key={index}>
                                 <span>{trans.description}</span>
                                 <span>{trans.amount}</span>
-                                <button onClick={()=>{deleteTrans(trans.id)}}>x</button>
+                                <button onClick={() => { deleteTrans(trans.id) }}>x</button>
                             </li>
                         )
                     })}
+
                 </ul>
             </div>
             {/* addTransaction component  */}
@@ -91,4 +92,4 @@ function Main() {
     )
 }
 
-export default Main
+export default Main;
