@@ -125,8 +125,6 @@ function Main() {
           <br />
         </form>
       </div>
-
-      {/* <button>Add Transaction</button> */}
       <button onClick={addTaransactionHandler}>Add Transaction</button>
     </div>
   );

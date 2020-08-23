@@ -27,11 +27,7 @@ function Main() {
     });
   };
   // ------this one make issue in the app-------
-  //   addTrans({
-  //     description: newDes,
-  //     amount: newAmount,
-  //     id: Math.floor(Math.random() * 10000000),
-  //   });
+
   //   ------end-------
 
   // income and expense amount
@@ -125,8 +121,6 @@ function Main() {
           <br />
         </form>
       </div>
-
-      {/* <button>Add Transaction</button> */}
       <button onClick={addTaransactionHandler}>Add Transaction</button>
     </div>
   );
