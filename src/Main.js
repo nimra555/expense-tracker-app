@@ -26,34 +26,34 @@ function Main() {
 
     // income and expense amount 
 
-    function addIncome() {
-        let income = 0;
-        for (let i = 0; i < Addtransaction.length; i++) {
-            if (Addtransaction[i].amount > 0) {
-                income += Addtransaction[i].amount
-            }
-        }
-        return income;
-    }
+    // function addIncome() {
+    //     let income = 0;
+    //     for (let i = 0; i < Addtransaction.length; i++) {
+    //         if (Addtransaction[i].amount > 0) {
+    //             income += Addtransaction[i].amount
+    //         }
+    //     }
+    //     return income;
+    // }
 
-    function addExpense() {
-        let expense = 0;
-        for (let e = 0; e < Addtransaction.length; e++) {
-            if (Addtransaction[e].amount < 0) {
-                expense += Addtransaction[e].amount
-            }
-        }
-        return expense;
-    }
+    // function addExpense() {
+    //     let expense = 0;
+    //     for (let e = 0; e < Addtransaction.length; e++) {
+    //         if (Addtransaction[e].amount < 0) {
+    //             expense += Addtransaction[e].amount
+    //         }
+    //     }
+    //     return expense;
+    // }
 
     return (
         <div>
             {/* balance component */}
-            <h2>Total <br /> {addIncome() + addExpense()} </h2>
+            <h2>Total <br /> 4000 </h2>
             {/* account summary */}
             <div className="data">
-                <h3>Income <br /> {addIncome()} </h3>
-                <h3>Expense <br /> {addExpense()} </h3>
+                <h3>Income <br /> 5000 </h3>
+                <h3>Expense <br /> -1000 </h3>
             </div>
             {/* transaction history */}
             <div className="history">
