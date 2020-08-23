@@ -27,34 +27,30 @@ function Main() {
     });
   };
   // ------this one make issue in the app-------
-  //   addTrans({
-  //     description: newDes,
-  //     amount: newAmount,
-  //     id: Math.floor(Math.random() * 10000000),
-  //   });
+
   //   ------end-------
 
   // income and expense amount
 
-  function addIncome() {
-      let income = 0;
-      for (let i = 0; i < Addtransaction.length; i++) {
-          if (Addtransaction[i].amount > 0) {
-              income += Addtransaction[i].amount
-          }
-      }
-      return income;
-  }
+  // function addIncome() {
+  //     let income = 0;
+  //     for (let i = 0; i < Addtransaction.length; i++) {
+  //         if (Addtransaction[i].amount > 0) {
+  //             income += Addtransaction[i].amount
+  //         }
+  //     }
+  //     return income;
+  // }
 
-  function addExpense() {
-      let expense = 0;
-      for (let e = 0; e < Addtransaction.length; e++) {
-          if (Addtransaction[e].amount < 0) {
-              expense += Addtransaction[e].amount
-          }
-      }
-      return expense;
-  }
+  // function addExpense() {
+  //     let expense = 0;
+  //     for (let e = 0; e < Addtransaction.length; e++) {
+  //         if (Addtransaction[e].amount < 0) {
+  //             expense += Addtransaction[e].amount
+  //         }
+  //     }
+  //     return expense;
+  // }
 
   return (
     <div>
@@ -65,10 +61,10 @@ function Main() {
       {/* account summary */}
       <div className="data">
         <h3>
-          Income <br /> {addIncome()}
+          Income <br /> 5000{" "}
         </h3>
         <h3>
-          Expense <br /> {addExpense()}
+          Expense <br /> -1000{" "}
         </h3>
       </div>
       {/* transaction history */}
@@ -77,7 +73,7 @@ function Main() {
         <hr />
         <ul>
           {console.log(Addtransaction)}
-          {Addtransaction.map((trans) => {
+          {/* {Addtransaction.map((trans) => {
             return (
               <li>
                 <span>{trans.description}</span>
@@ -91,7 +87,7 @@ function Main() {
                 </button>
               </li>
             );
-          })}
+          })} */}
         </ul>
       </div>
       {/* addTransaction component  */}
@@ -125,8 +121,6 @@ function Main() {
           <br />
         </form>
       </div>
-
-      {/* <button>Add Transaction</button> */}
       <button onClick={addTaransactionHandler}>Add Transaction</button>
     </div>
   );

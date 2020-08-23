@@ -1,10 +1,11 @@
 
+
 const TransactionReducer = ((state, action) => {
     switch (action.type) {
         case 'Add_Transaction': {
             return {
                 ...state,
-                transaction : [action.payload, ...state.transaction]
+                transaction : [...action.payload,...state.transaction]
             }  
         }
         case "DELETE" : {
@@ -15,8 +16,8 @@ const TransactionReducer = ((state, action) => {
             }
         }  
         default: return state;
+
     }
-  }
-);
+})
 
 export default TransactionReducer;

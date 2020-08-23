@@ -1,8 +1,7 @@
-import React from 'react';
-import './App.css';
-import Parent from './Parent';
-import { TransactionProvider } from './Transcontext';
-
+import React from "react";
+import "./App.css";
+import Parent from "./Parent";
+import { TransactionProvider } from "./Transcontext";
 
 function App() {
   return (
@@ -15,7 +14,4 @@ function App() {
 }
 
 export default App;
-
-
-
 
