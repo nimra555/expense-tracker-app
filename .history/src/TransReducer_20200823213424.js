@@ -4,7 +4,7 @@ const TransactionReducer = (state, action) => {
       return {
         ...state,
         // remove... from ...action.payload
-        transaction: [action.payload, ...state.transaction],
+        transaction: [...action.payload, ...state.transaction],
       };
     }
     case "DELETE": {

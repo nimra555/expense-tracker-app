@@ -19,14 +19,11 @@ function Main() {
     return false;
   };
 
-  //   ------this one make issue in the app-------
-  //   addTrans({
-  //     description: newDes,
-  //     amount: newAmount,
-  //     id: Math.floor(Math.random() * 10000000),
-  //   });
-
-  //   ------end-------
+  addTrans({
+    description: newDes,
+    amount: newAmount,
+    id: Math.floor(Math.random() * 10000000),
+  });
 
   // income and expense amount
 

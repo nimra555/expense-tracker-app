@@ -19,14 +19,11 @@ function Main() {
     return false;
   };
 
-  //   ------this one make issue in the app-------
-  //   addTrans({
-  //     description: newDes,
-  //     amount: newAmount,
-  //     id: Math.floor(Math.random() * 10000000),
-  //   });
-
-  //   ------end-------
+  addTrans({
+    description: newDes,
+    amount: newAmount,
+    id: Math.floor(Math.random() * 10000000),
+  });
 
   // income and expense amount
 
@@ -70,22 +67,15 @@ function Main() {
         <h2>History</h2>
         <hr />
         <ul>
-          {console.log(Addtransaction)}
           {/* {Addtransaction.map((trans) => {
-            return (
-              <li>
-                <span>{trans.description}</span>
-                <span>{trans.amount}</span>
-                <button
-                  onClick={() => {
-                    deleteTrans(trans.id);
-                  }}
-                >
-                  x
-                </button>
-              </li>
-            );
-          })} */}
+                        return (
+                            <li>
+                                <span>{trans.description}</span>
+                                <span>{trans.amount}</span>
+                                <button onClick={()=>{deleteTrans(trans.id)}}>x</button>
+                            </li>
+                        )
+                    })} */}
         </ul>
       </div>
       {/* addTransaction component  */}
@@ -95,26 +85,27 @@ function Main() {
         <form onSubmit={AddnewTrans}>
           <label>
             Add new Description
-            <input
+            {/* <input
               type="text"
               placeholder="Enter Description"
               required
               onChange={(event) => {
                 setDes(event.target.value);
               }}
-            />
+            /> */}
           </label>
           <br />
           <label>
+            {" "}
             Add Amount
-            <input
+            {/* <input
               type="amount"
               placeholder="Enter Amount"
               required
               onChange={(event) => {
                 setAmount(event.target.value);
               }}
-            />
+            /> */}
           </label>
           <br />
         </form>

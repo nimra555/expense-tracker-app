@@ -6,7 +6,7 @@ function Child() {
   return (
     <div>
       <Header />
-      <Main />
+      {/* <Main /> */}
     </div>
   );
 }

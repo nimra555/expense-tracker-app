@@ -5,11 +5,10 @@ import { TransactionProvider } from "./Transcontext";
 
 function App() {
   return (
-    <TransactionProvider>
-      <div>
-        <Parent />
-      </div>
-    </TransactionProvider>
+    // <TransactionProvider>
+    //   <div>{/* <Parent /> */}</div>
+    // </TransactionProvider>
+   
   );
 }
 

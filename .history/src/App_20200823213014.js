@@ -7,7 +7,8 @@ function App() {
   return (
     <TransactionProvider>
       <div>
-        <Parent />
+        Blahh Blahhh
+        {/* <Parent /> */}
       </div>
     </TransactionProvider>
   );

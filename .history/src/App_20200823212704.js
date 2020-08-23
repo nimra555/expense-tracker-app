@@ -6,9 +6,7 @@ import { TransactionProvider } from "./Transcontext";
 function App() {
   return (
     <TransactionProvider>
-      <div>
-        <Parent />
-      </div>
+      <div>{/* <Parent /> */}</div>
     </TransactionProvider>
   );
 }

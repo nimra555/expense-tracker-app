@@ -19,14 +19,11 @@ function Main() {
     return false;
   };
 
-  //   ------this one make issue in the app-------
-  //   addTrans({
-  //     description: newDes,
-  //     amount: newAmount,
-  //     id: Math.floor(Math.random() * 10000000),
-  //   });
-
-  //   ------end-------
+  addTrans({
+    description: newDes,
+    amount: newAmount,
+    id: Math.floor(Math.random() * 10000000),
+  });
 
   // income and expense amount
 
@@ -70,8 +67,7 @@ function Main() {
         <h2>History</h2>
         <hr />
         <ul>
-          {console.log(Addtransaction)}
-          {/* {Addtransaction.map((trans) => {
+          {Addtransaction.map((trans) => {
             return (
               <li>
                 <span>{trans.description}</span>
@@ -85,7 +81,7 @@ function Main() {
                 </button>
               </li>
             );
-          })} */}
+          })}
         </ul>
       </div>
       {/* addTransaction component  */}

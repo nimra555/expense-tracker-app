@@ -42,9 +42,6 @@ export function TransactionProvider({ children }) {
         deleteTrans,
       }}
     >
-      {/* Your Code  */}
-      {/* {{children}} */}
-      {/* Update Code */}
       {children}
     </global_transaction.Provider>
   );

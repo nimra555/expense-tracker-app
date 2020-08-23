@@ -3,7 +3,6 @@ const TransactionReducer = (state, action) => {
     case "Add_Transaction": {
       return {
         ...state,
-        // remove... from ...action.payload
         transaction: [action.payload, ...state.transaction],
       };
     }
