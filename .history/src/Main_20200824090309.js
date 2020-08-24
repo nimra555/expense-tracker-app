@@ -37,23 +37,23 @@ function Main() {
   // income and expense amount
 
   function addIncome() {
-    let income = 0;
-    for (let i = 0; i < Addtransaction.length; i++) {
-      if (Addtransaction[i].amount > 0) {
-        income += Addtransaction[i].amount;
+      let income = 0;
+      for (let i = 0; i < Addtransaction.length; i++) {
+          if (Addtransaction[i].amount > 0) {
+              income += Addtransaction[i].amount
+          }
       }
-    }
-    return income;
+      return income;
   }
 
   function addExpense() {
-    let expense = 0;
-    for (let e = 0; e < Addtransaction.length; e++) {
-      if (Addtransaction[e].amount < 0) {
-        expense += Addtransaction[e].amount;
+      let expense = 0;
+      for (let e = 0; e < Addtransaction.length; e++) {
+          if (Addtransaction[e].amount < 0) {
+              expense += Addtransaction[e].amount
+          }
       }
-    }
-    return expense;
+      return expense;
   }
 
   return (
@@ -92,8 +92,7 @@ function Main() {
               </li>
             );
           })}
-        </ul>
-        {/* {Addtransaction.map((trans) => {
+          {/* {Addtransaction.map((trans) => {
             return (
               <li>
                 <span>{trans.description}</span>
