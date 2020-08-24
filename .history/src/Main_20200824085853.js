@@ -77,7 +77,7 @@ function Main() {
         <hr />
         <ul>
           {console.log(Addtransaction)}
-          {Addtransaction.transaction.map((trans) => {
+          {Addtransaction.transaction.map(() => {
             return (
               <li>
                 <span>{trans.description}</span>

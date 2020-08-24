@@ -77,20 +77,8 @@ function Main() {
         <hr />
         <ul>
           {console.log(Addtransaction)}
-          {Addtransaction.transaction.map((trans) => {
-            return (
-              <li>
-                <span>{trans.description}</span>
-                <span>{trans.amount}</span>
-                <button
-                  onClick={() => {
-                    deleteTrans(trans.id);
-                  }}
-                >
-                  x
-                </button>
-              </li>
-            );
+          {Addtransaction.transaction.map(() => {
+            return;
           })}
           {/* {Addtransaction.map((trans) => {
             return (
