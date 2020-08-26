@@ -13,26 +13,22 @@ function Main() {
 
   let AddnewTrans = (event) => {
     event.preventDefault();
-    if (Number(newAmount) === 0) {
-      alert("Please enter correct value");
-    }
-    return false;
   };
 
   const addTaransactionHandler = () => {
     addTrans({
       description: newDes,
-      amount: newAmount,
+      amount: Number(newAmount),
       id: Math.floor(Math.random() * 10000000),
     });
+    if (Number(newAmount) === 0) {
+      alert("Please enter correct value");
+    }
+    return false;
+    
   };
-  // ------this one make issue in the app-------
-  //   addTrans({
-  //     description: newDes,
-  //     amount: newAmount,
-  //     id: Math.floor(Math.random() * 10000000),
-  //   });
-  //   ------end-------
+  
+  
 
   // income and expense amount
 
@@ -59,16 +55,16 @@ function Main() {
   return (
     <div>
       {/* balance component */}
-      <h2>
-        Total <br /> 4000{" "}
+      <h2 className="total_balance">
+        Total balance <br /> ${addIncome() + addExpense()}
       </h2>
       {/* account summary */}
       <div className="data">
-        <h3>
-          Income <br /> {addIncome()}
+        <h3 className="green">
+          Income <br /> ${addIncome()}
         </h3>
-        <h3>
-          Expense <br /> {addExpense()}
+        <h3 className="red">
+          Expense <br /> ${addExpense()}
         </h3>
       </div>
       {/* transaction history */}
@@ -77,12 +73,12 @@ function Main() {
         <hr />
         <ul>
           {console.log(Addtransaction)}
-          {Addtransaction.map((trans) => {
+          {Addtransaction.map((trans,index) => {
             return (
-              <li>
+              <li key={index}>
                 <span>{trans.description}</span>
                 <span>{trans.amount}</span>
-                <button
+                <button className="delete"
                   onClick={() => {
                     deleteTrans(trans.id);
                   }}
@@ -98,7 +94,7 @@ function Main() {
       <div className="transaction">
         <h2> Transaction </h2>
         <hr />
-        <form onSubmit={AddnewTrans}>
+        <form onSubmit={AddnewTrans} className="form">
           <label>
             Add new Description
             <input
@@ -114,7 +110,7 @@ function Main() {
           <label>
             Add Amount
             <input
-              type="amount"
+              type="number"
               placeholder="Enter Amount"
               required
               onChange={(event) => {
@@ -127,7 +123,7 @@ function Main() {
       </div>
 
       {/* <button>Add Transaction</button> */}
-      <button onClick={addTaransactionHandler}>Add Transaction</button>
+      <button onClick={addTaransactionHandler} className="butn">Add Transaction</button>
     </div>
   );
 }

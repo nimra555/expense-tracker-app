@@ -4,7 +4,7 @@ import Main from "./Main";
 
 function Child() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Main />
     </div>

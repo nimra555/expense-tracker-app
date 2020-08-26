@@ -12,7 +12,7 @@ const Initialtransaction = {
 // create the global context
 export const global_transaction = createContext(Initialtransaction);
 
-// create the provider for the expense context
+// create the provider for the global context
 export function TransactionProvider({ children }) {
   let [state, dispatch] = useReducer(TransactionReducer, Initialtransaction);
 
@@ -38,14 +38,12 @@ export function TransactionProvider({ children }) {
 return (
     <global_transaction.Provider
       value={{
-        Addtransaction: state,
+        Addtransaction: state.transaction,
         addTrans,
         deleteTrans,
       }}
     >
-      {/* Your Code  */}
-      {/* {{children}} */}
-      {/* Update Code */}
+     
       {children}
     </global_transaction.Provider>
   );
