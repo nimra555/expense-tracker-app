@@ -25,31 +25,31 @@ function Main() {
       alert("Please enter correct value");
     }
     return false;
-    
+
   };
-  
-  
+
+
 
   // income and expense amount
 
   function addIncome() {
-      let income = 0;
-      for (let i = 0; i < Addtransaction.length; i++) {
-          if (Addtransaction[i].amount > 0) {
-              income += Addtransaction[i].amount
-          }
+    let income = 0;
+    for (let i = 0; i < Addtransaction.length; i++) {
+      if (Addtransaction[i].amount > 0) {
+        income += Addtransaction[i].amount;
       }
-      return income;
+    }
+    return income;
   }
 
   function addExpense() {
-      let expense = 0;
-      for (let e = 0; e < Addtransaction.length; e++) {
-          if (Addtransaction[e].amount < 0) {
-              expense += Addtransaction[e].amount
-          }
+    let expense = 0;
+    for (let e = 0; e < Addtransaction.length; e++) {
+      if (Addtransaction[e].amount < 0) {
+        expense += Addtransaction[e].amount;
       }
-      return expense;
+    }
+    return expense;
   }
 
   return (
@@ -72,7 +72,6 @@ function Main() {
         <h2>History</h2>
         <hr />
         <ul>
-          {console.log(Addtransaction)}
           {Addtransaction.map((trans,index) => {
             return (
               <li key={index}>
@@ -91,41 +90,42 @@ function Main() {
         </ul>
       </div>
       {/* addTransaction component  */}
-      <div className="transaction">
-        <h2> Transaction </h2>
-        <hr />
-        <form onSubmit={AddnewTrans} className="form">
-          <label>
-            Add new Description
+      
+        <div className="transaction">
+          <h2> Transaction </h2>
+          <hr />
+          <form onSubmit={AddnewTrans} className="form">
+            <label>
+              Add new Description
             <input
-              type="text"
-              placeholder="Enter Description"
-              required
-              onChange={(event) => {
-                setDes(event.target.value);
-              }}
-            />
-          </label>
-          <br />
-          <label>
-            Add Amount
+                type="text"
+                placeholder="Enter Description"
+                required
+                onChange={(event) => {
+                  setDes(event.target.value);
+                }}
+              />
+            </label>
+            <br />
+            <label>
+              Add Amount
             <input
-              type="number"
-              placeholder="Enter Amount"
-              required
-              onChange={(event) => {
-                setAmount(event.target.value);
-              }}
-            />
-          </label>
-          <br />
-        </form>
+                type="number"
+                placeholder="Enter Amount"
+                required
+                onChange={(event) => {
+                  setAmount(event.target.value);
+                }}
+              />
+            </label>
+            <br />
+          </form>
+        </div>
+
+        {/* <button>Add Transaction</button> */}
+        <button onClick={addTaransactionHandler} className="butn">Add Transaction</button>
       </div>
-
-      {/* <button>Add Transaction</button> */}
-      <button onClick={addTaransactionHandler} className="butn">Add Transaction</button>
-    </div>
-  );
-}
-
-export default Main;
+      );
+    }
+    
+    export default Main;
