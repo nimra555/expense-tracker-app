@@ -94,12 +94,8 @@ input:focus{
   cursor: pointer;
 }
 
-@media screen and (min-width: 400 px){
+@media screen and (min-width: 400px){
   .header{
-    text-shadow: 5px 5px 5px gray;
-    text-align: center;
-    padding-top: 20px;
-    font-size: 5px;
-    color: blue;
+    font-size: 30px;
   }
 }
